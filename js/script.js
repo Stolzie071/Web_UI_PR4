@@ -53,8 +53,7 @@ function initThemeToggle() {
     applyTheme(saved);
   } else {
 
-    const current = body.classList.contains("page--light") ? "light" : "dark";
-    applyTheme(current);
+    applyTheme("dark");
   }
 
   toggle.addEventListener("click", () => {
