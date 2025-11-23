@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>STour — Камчатка</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page page--light">
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#hero" class="logo">STour</a>
+
+      <nav class="nav" aria-label="Главная навигация">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#location" class="nav__link">Локация</a>
+          </li>
+          <li class="nav__item">
+            <a href="#route" class="nav__link">Маршрут</a>
+          </li>
+          <li class="nav__item">
+            <a href="#schedule" class="nav__link">График</a>
+          </li>
+          <li class="nav__item">
+            <a href="#gallery" class="nav__link">Галерея</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__controls">
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Переключить тему"
+          data-theme-toggle
+        >
+          <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀</span>
+          <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">🌙</span>
+        </button>
+
+        <button class="header__auth-btn" type="button">
+          Войти
+        </button>
+
+        <button
+          class="burger"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          data-burger
+        >
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+
+    <nav
+      class="mobile-nav"
+      id="mobile-nav"
+      aria-label="Мобильная навигация"
+      hidden
+    >
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item">
+          <a href="#location" class="mobile-nav__link" data-close-menu>Локация</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#route" class="mobile-nav__link" data-close-menu>Маршрут</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#schedule" class="mobile-nav__link" data-close-menu>График</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#gallery" class="mobile-nav__link" data-close-menu>Галерея</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="main">
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero__background" aria-hidden="true"></div>
+      <img
+        class="hero__bears"
+        src="assets/img/bears.png"
+        alt="Два бурых медведя на скале на фоне гор Камчатки"
+      />
+
+      <div class="container hero__content">
+        <div class="hero__text">
+          <p class="hero__label">неделя приключений</p>
+          <h1 class="hero__title" id="hero-title">Камчатка</h1>
+          <p class="hero__subtitle">
+            Отправляйся с нами в невероятное путешествие по земле вулканов,
+            горячих источников и бескрайних диких просторов. За эти дни ты
+            увидишь уникальные ландшафты, почувствуешь мощь природы и
+            окунёшься в атмосферу настоящей свободы.
+          </p>
+
+          <div class="hero__actions">
+            <button
+              class="btn btn--primary"
+              type="button"
+              data-modal-open="booking-modal"
+            >
+              Отправиться
+              <span aria-hidden="true" class="btn__icon">▶</span>
+            </button>
+
+            <button
+              class="btn btn--ghost"
+              type="button"
+              data-scroll-to="#route"
+            >
+              Маршрут тура
+            </button>
+          </div>
+
+          <dl class="hero__meta">
+            <div class="hero__meta-item">
+              <dt>Длительность</dt>
+              <dd>7 дней</dd>
+            </div>
+            <div class="hero__meta-item">
+              <dt>Сложность</dt>
+              <dd>Средняя</dd>
+            </div>
+            <div class="hero__meta-item">
+              <dt>Группа</dt>
+              <dd>до 12 человек</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--light" id="location">
+      <div class="container section__inner section__inner--two-cols">
+        <article class="section__content">
+          <h2 class="section__title">Почему именно Камчатка?</h2>
+          <p class="section__text">
+            Камчатка — одно из самых диких и нетронутых мест России. Здесь
+            десятки действующих вулканов, туманные долины гейзеров и чёрные
+            вулканические пляжи. Мы продумали маршрут так, чтобы ты увидел
+            максимум за короткое время, но при этом не чувствовал себя в
+            гонке.
+          </p>
+          <ul class="section__list">
+            <li>Проживание в комфортных базах и уютных домиках;</li>
+            <li>Проверенные гиды и надёжный транспорт;</li>
+            <li>Никаких туристических «ловушек», только живая природа.</li>
+          </ul>
+        </article>
+
+        <div class="section__media">
+            <img
+            src="assets/img/gaser.png"
+            alt="Вулкан, море и горячие источники Камчатки"
+            class="section__image"
+        />
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="route">
+      <div class="container">
+        <h2 class="section__title section__title--center">
+          Маршрут по дням
+        </h2>
+        <p class="section__text section__text--center">
+          Каждый день — отдельное приключение. Нажми на день, чтобы узнать
+          подробности.
+        </p>
+
+        <div class="tabs" data-tabs>
+          <div class="tabs__list" role="tablist" aria-label="Дни маршрута">
+            <button
+              class="tabs__tab tabs__tab--active"
+              type="button"
+              role="tab"
+              aria-selected="true"
+              aria-controls="day1"
+              id="tab-day1"
+              data-tab="day1"
+            >
+              День 1
+            </button>
+            <button
+              class="tabs__tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="day2"
+              id="tab-day2"
+              data-tab="day2"
+            >
+              День 2
+            </button>
+            <button
+              class="tabs__tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="day3"
+              id="tab-day3"
+              data-tab="day3"
+            >
+              День 3–4
+            </button>
+            <button
+              class="tabs__tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+              aria-controls="day5"
+              id="tab-day5"
+              data-tab="day5"
+            >
+              День 5–7
+            </button>
+          </div>
+
+          <div class="tabs__panels">
+            <article
+              class="tabs__panel tabs__panel--active"
+              id="day1"
+              role="tabpanel"
+              aria-labelledby="tab-day1"
+            >
+              <h3 class="tabs__title">Знакомство с Петропавловском-Камчатским</h3>
+              <p class="tabs__text">
+                Встреча в аэропорту, заселение, прогулка по набережной Авачинской
+                бухты и первая дегустация дальневосточных морепродуктов.
+              </p>
+            </article>
+
+            <article
+              class="tabs__panel"
+              id="day2"
+              role="tabpanel"
+              aria-labelledby="tab-day2"
+              hidden
+            >
+              <h3 class="tabs__title">Восхождение к подножию вулкана</h3>
+              <p class="tabs__text">
+                Джип-тур по бездорожью, переход по лавовым полям и панорамные
+                виды на цепь действующих вулканов.
+              </p>
+            </article>
+
+            <article
+              class="tabs__panel"
+              id="day3"
+              role="tabpanel"
+              aria-labelledby="tab-day3"
+              hidden
+            >
+              <h3 class="tabs__title">Горячие источники и медведи</h3>
+              <p class="tabs__text">
+                Купание в природных термальных источниках и фотосафари на
+                медведей с безопасного расстояния.
+              </p>
+            </article>
+
+            <article
+              class="tabs__panel"
+              id="day5"
+              role="tabpanel"
+              aria-labelledby="tab-day5"
+              hidden
+            >
+              <h3 class="tabs__title">Берег океана и прощальный ужин</h3>
+              <p class="tabs__text">
+                Чёрные пляжи Тихого океана, пикник у кромки воды и прощальный
+                ужин с командой перед вылетом домой.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--light" id="schedule">
+      <div class="container section__inner section__inner--two-cols">
+        <article class="section__content">
+          <h2 class="section__title">График туров</h2>
+          <p class="section__text">
+            Мы запускаем группы в течение всего летнего сезона. Выбери
+            подходящие даты и оставь заявку — менеджер свяжется с тобой и
+            поможет с перелётом.
+          </p>
+
+          <ul class="schedule-list">
+            <li class="schedule-list__item">
+              <span class="schedule-list__dates">Июнь</span>
+              <span class="schedule-list__info">2 группы / есть места</span>
+            </li>
+            <li class="schedule-list__item">
+              <span class="schedule-list__dates">Июль</span>
+              <span class="schedule-list__info">3 группы / высокий спрос</span>
+            </li>
+            <li class="schedule-list__item">
+              <span class="schedule-list__dates">Август</span>
+              <span class="schedule-list__info">2 группы / мало мест</span>
+            </li>
+          </ul>
+
+          <button
+            class="btn btn--primary"
+            type="button"
+            data-modal-open="booking-modal"
+          >
+            Узнать о ближайших датах
+          </button>
+        </article>
+
+        <aside class="section__media">
+            <img
+            src="assets/img/chart.png"
+            alt="Календарь с датами туров на фоне камчатских гор"
+            class="section__image section__image--calendar"
+            />
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="gallery">
+      <div class="container">
+        <h2 class="section__title section__title--center">Атмосфера тура</h2>
+        <p class="section__text section__text--center">
+          Здесь реальные фотографии с наших путешествий.
+        </p>
+        <div class="gallery">
+            <figure class="gallery__item gallery__item--wide">
+                <img src="assets/img/1.jpeg" alt="Пейзаж Камчатки" class="gallery__image">
+            </figure>
+
+            <figure class="gallery__item">
+                <img src="assets/img/2.webp" alt="Группа на маршруте" class="gallery__image">
+            </figure>
+
+            <figure class="gallery__item">
+                <img src="assets/img/3.png" alt="Вулкан на закате" class="gallery__image">
+            </figure>
+
+            <figure class="gallery__item">
+                <img src="assets/img/4.webp" alt="Горячие источники Камчатки" class="gallery__image">
+            </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--accent" id="cta">
+      <div class="container section__inner section__inner--cta">
+        <div class="section__content">
+          <h2 class="section__title">Готов в путь?</h2>
+          <p class="section__text">
+            Оставь контакты — мы поможем подобрать даты, подскажем по экипировке
+            и расскажем всё, что нужно знать перед поездкой.
+          </p>
+        </div>
+
+        <form class="cta-form" action="#" method="post" novalidate>
+          <label class="cta-form__field">
+            <span class="cta-form__label">Имя</span>
+            <input
+              type="text"
+              name="name"
+              autocomplete="name"
+              required
+              placeholder="Как к тебе обращаться?"
+            />
+          </label>
+
+          <label class="cta-form__field">
+            <span class="cta-form__label">Email</span>
+            <input
+              type="email"
+              name="email"
+              autocomplete="email"
+              required
+              placeholder="example@mail.ru"
+            />
+          </label>
+
+          <label class="cta-form__field">
+            <span class="cta-form__label">Телефон</span>
+            <input
+              type="tel"
+              name="phone"
+              autocomplete="tel"
+              placeholder="+7 (___) ___-__-__"
+            />
+          </label>
+
+          <button class="btn btn--primary" type="submit">
+            Отправить заявку
+          </button>
+
+          <p class="cta-form__note">
+            Нажимая на кнопку, ты соглашаешься с обработкой персональных данных.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__brand">© STour, 2025</p>
+      <p class="footer__note">
+        Камчатка: путешествуй ответственно — уважай природу и местных жителей.
+      </p>
+    </div>
+  </footer>
+
+
+  <div
+    class="modal"
+    id="booking-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="booking-title"
+    aria-hidden="true"
+  >
+    <div class="modal__overlay" data-modal-close></div>
+    <div class="modal__window">
+      <button
+        class="modal__close"
+        type="button"
+        aria-label="Закрыть окно"
+        data-modal-close
+      >
+        ×
+      </button>
+
+      <h2 class="modal__title" id="booking-title">Забронировать тур</h2>
+      <p class="modal__text">
+        Оставь свои контакты — мы свяжемся с тобой, уточним даты и ответим на
+        любые вопросы по поездке.
+      </p>
+
+      <form class="modal-form" action="#" method="post" novalidate>
+        <label class="modal-form__field">
+          <span class="modal-form__label">Имя</span>
+          <input
+            type="text"
+            name="modal-name"
+            required
+            autocomplete="name"
+            placeholder="Твоё имя"
+          />
+        </label>
+
+        <label class="modal-form__field">
+          <span class="modal-form__label">Email</span>
+          <input
+            type="email"
+            name="modal-email"
+            required
+            autocomplete="email"
+            placeholder="example@mail.ru"
+          />
+        </label>
+
+        <label class="modal-form__field">
+          <span class="modal-form__label">Желаемые даты</span>
+          <input
+            type="text"
+            name="modal-dates"
+            placeholder="Например: июль, вторая половина"
+          />
+        </label>
+
+        <button class="btn btn--primary btn--full" type="submit">
+          Отправить запрос
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+
+
+<div
+  class="gallery-lightbox"
+  id="gallery-lightbox"
+  role="dialog"
+  aria-modal="true"
+  aria-hidden="true"
+>
+  <button
+    class="gallery-lightbox__close"
+    type="button"
+    aria-label="Закрыть изображение"
+  >
+    ×
+  </button>
+
+  <img src="" alt="" class="gallery-lightbox__image" />
+</div>
+
+</body>
+</html>
